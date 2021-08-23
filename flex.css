@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.centered {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top {
+    background-color: rgb(248, 99, 0);
+    color: rgb(255, 0, 0);
+    flex: 0.5;
+}
+
+.head {
+    background-color: rgb(0, 17, 255);
+    flex: 2.5;
+}
+
+.featcont {
+    display: flex;
+    flex: 4;
+    flex-wrap: wrap;
+}
+
+.featcont > div {
+    flex-basis: 33.33%;
+    height: 35vh;
+}
+
+.mid01 {
+    background-color: rgb(30, 255, 0);
+}
+
+.mid02 {
+    background-color: rgb(255, 252, 56);
+}
+
+.mid03 {
+    background-color: rgb(95, 51, 255);
+}
+
+.featcont > .sign-up {
+    background-color: rgb(255, 0, 255);
+    flex-basis: 100%;
+    height: 10vh;
+}
+
+.content {
+    background-color: rgb(153, 0, 255);
+    flex: 3;
+}
+
+/* Tablet */
+
+@media (max-width: 740px) {
+    .featcont {
+        order: 4;
+    }
+
+    .featcont > div,
+    .featcont > .sign-up {
+        flex-basis: 50%;
+        height: 25vh;
+    }
+
+    .featcont > .sign-up {
+        order: -1;
+    }
+
+    .content {
+        flex: 3.5;
+        order: 2;
+    }
+}
+
+/*HP*/
+
+@media (max-width: 500px) {
+    .featcont > div,
+    .featcont > .sign-up {
+        flex-basis: 100%;
+        height: 12vh;
+    }
+
+    .featcont > .sign-up {
+        order: -1;
+    }
+} 
